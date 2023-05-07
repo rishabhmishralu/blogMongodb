@@ -1,8 +1,10 @@
 const express= require("express")
+const cors=require("cors")
 const connect = require("./config/config")
 const route=require("./router/router")
 
 const app= express()
+app.use(cors())
 app.use(express.json())
 
 app.get("/",(req,res)=>{
